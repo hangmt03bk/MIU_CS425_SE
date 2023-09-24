@@ -77,7 +77,7 @@
 				<td th:text="${student.lastName}"></td>
 				<td th:text="${student.cgpa}"></td>
 				<td th:text="${#dates.format(student.dateOfEnrollment, 'dd/MM/yyyy')}"></td>
-				<td><input type="checkbox" checked="${student.isInternational}" disabled="disabled"> </input></td>
+				<td><input type="checkbox" th:checked="${student.isInternational}" disabled="disabled"> </input></td>
 				<td>
 					<a style="padding: 10px;" th:href="@{/eregistrar/edit/{id}(id=${student.studentId})}">Edit</a>
 					<a style="padding: 10px;" th:href="@{/eregistrar/delete/{id}(id=${student.studentId})}">Delete</a>
